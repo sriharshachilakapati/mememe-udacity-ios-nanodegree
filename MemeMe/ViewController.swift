@@ -13,29 +13,42 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
 
+    private let textFieldDelegate = SelfClosingTextFieldDelegate()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setTextAttributes(for: topTextField)
-        setTextAttributes(for: bottomTextField)
+        setupTextField(topTextField)
+        setupTextField(bottomTextField)
 
         setDefaultState()
     }
 
-    private func setTextAttributes(for textField: UITextField) {
-        let textAttributes: [NSAttributedString.Key : Any] = [
+    private func setupTextField(_ textField: UITextField) {
+        textField.delegate = textFieldDelegate
+
+        setTextAttributes(withExisting: &textField.defaultTextAttributes, color: UIColor.gray)
+
+        textField.attributedPlaceholder = NSAttributedString(string: textField.placeholder!,
+                                                             attributes: textField.defaultTextAttributes)
+
+        setTextAttributes(withExisting: &textField.defaultTextAttributes, color: UIColor.white)
+    }
+
+    private func setTextAttributes(withExisting existingAttributes: inout [NSAttributedString.Key : Any], color: UIColor) {
+        let newAttributes: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.strokeColor: UIColor.black,
-            NSAttributedString.Key.strokeWidth: -1.0
+            NSAttributedString.Key.strokeWidth: -1,
+            NSAttributedString.Key.foregroundColor: color
         ]
 
-        let existingAttributes = textField.defaultTextAttributes
-        textField.defaultTextAttributes = textAttributes.merging(existingAttributes) { (current, _) in current }
+        existingAttributes = newAttributes.merging(existingAttributes) { (new, _) in new }
     }
 
     private func setDefaultState() {
         imageView.image = nil
-        topTextField.text = "TOP"
-        bottomTextField.text = "BOTTOM"
+        topTextField.text = nil
+        bottomTextField.text = nil
     }
 
     @IBAction func onCameraClicked() {
@@ -52,5 +65,6 @@ class ViewController: UIViewController {
 
     @IBAction func onCancelClicked() {
         setDefaultState()
+        view.endEditing(true)
     }
 }
