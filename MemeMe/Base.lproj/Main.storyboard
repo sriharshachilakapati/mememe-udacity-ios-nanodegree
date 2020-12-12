@@ -56,9 +56,13 @@
                         <constraints>
                             <constraint firstItem="f9t-rN-cSl" firstAttribute="bottom" secondItem="h4f-h3-imZ" secondAttribute="top" id="5Le-cD-l7u"/>
                             <constraint firstItem="f9t-rN-cSl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J1c-Ye-wA5"/>
-                            <constraint firstItem="d2z-ci-JuN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Lxa-Tx-gx3"/>
+                            <constraint firstItem="d2z-ci-JuN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Lxa-Tx-gx3">
+                                <variation key="heightClass=compact" constant="30"/>
+                            </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h4f-h3-imZ" secondAttribute="trailing" id="X9d-cg-7md"/>
-                            <constraint firstItem="h4f-h3-imZ" firstAttribute="top" secondItem="AFd-m7-BcS" secondAttribute="bottom" constant="60" id="b1s-Z8-Yzw"/>
+                            <constraint firstItem="h4f-h3-imZ" firstAttribute="top" secondItem="AFd-m7-BcS" secondAttribute="bottom" constant="60" id="b1s-Z8-Yzw">
+                                <variation key="heightClass=compact" constant="30"/>
+                            </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d2z-ci-JuN" secondAttribute="trailing" id="c53-SX-Lej"/>
                             <constraint firstItem="d2z-ci-JuN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fXL-hh-2Mn"/>
                             <constraint firstItem="AFd-m7-BcS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hXY-wC-xUi"/>
