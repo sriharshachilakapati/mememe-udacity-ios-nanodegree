@@ -12,12 +12,13 @@ extension ViewController : UIImagePickerControllerDelegate, UINavigationControll
         let pickerController = UIImagePickerController()
         pickerController.sourceType = source
         pickerController.delegate = self
+        pickerController.allowsEditing = true
 
         present(pickerController, animated: true, completion: nil)
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             imageView.image = image
         }
 
