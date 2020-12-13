@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var toolbar: UIToolbar!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onShareClicked() {
-        // TODO
+        showShareActivity()
     }
 
     @IBAction func onCancelClicked() {
