@@ -12,12 +12,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupTextField(topTextField)
         setupTextField(bottomTextField)
+
+        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
 
         setDefaultState()
     }
@@ -37,11 +40,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onCameraClicked() {
-        // TODO
+        startPicker(source: .camera)
     }
 
     @IBAction func onAlbumClicked() {
-        // TODO
+        startPicker(source: .photoLibrary)
     }
 
     @IBAction func onShareClicked() {
