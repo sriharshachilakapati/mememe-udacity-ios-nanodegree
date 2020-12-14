@@ -97,6 +97,7 @@
                         <outlet property="bottomTextField" destination="AFd-m7-BcS" id="6Tf-gj-YHq"/>
                         <outlet property="cameraButton" destination="Rrv-oQ-s4p" id="pWv-9e-NRH"/>
                         <outlet property="imageView" destination="f9t-rN-cSl" id="5av-N3-jHk"/>
+                        <outlet property="shareButton" destination="uah-Sp-tg5" id="Hbo-Os-Aks"/>
                         <outlet property="toolbar" destination="h4f-h3-imZ" id="iC4-qn-69B"/>
                         <outlet property="topTextField" destination="d2z-ci-JuN" id="SaB-xq-hcL"/>
                     </connections>

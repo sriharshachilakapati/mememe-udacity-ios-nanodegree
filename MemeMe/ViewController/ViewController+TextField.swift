@@ -29,6 +29,12 @@ extension ViewController : UITextFieldDelegate {
         existingAttributes = newAttributes.merging(existingAttributes) { (new, _) in new }
     }
 
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        if reason == .committed {
+            shareButton.isEnabled = true
+        }
+    }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

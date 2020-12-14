@@ -14,6 +14,7 @@ class ViewController: UIViewController, UIFontPickerViewControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var toolbar: UIToolbar!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
 
     private var defaultFont: UIFont!
 
@@ -44,6 +45,8 @@ class ViewController: UIViewController, UIFontPickerViewControllerDelegate {
 
         topTextField.font = defaultFont
         bottomTextField.font = defaultFont
+
+        shareButton.isEnabled = false
     }
 
     @IBAction func onCameraClicked() {
