@@ -69,6 +69,7 @@ class MemeEditorViewController: UIViewController, UIFontPickerViewControllerDele
     @IBAction func onFontClicked() {
         let fontPickerController = UIFontPickerViewController()
         fontPickerController.delegate = self
+        fontPickerController.configuration.includeFaces = true
         present(fontPickerController, animated: true, completion: nil)
     }
 
