@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIFontPickerViewControllerDelegate {
 
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
@@ -15,12 +15,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var toolbar: UIToolbar!
 
+    private var defaultFont: UIFont!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupTextField(topTextField)
         setupTextField(bottomTextField)
 
+        defaultFont = topTextField.font!
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
 
         setDefaultState()
@@ -38,6 +41,9 @@ class ViewController: UIViewController {
         imageView.image = nil
         topTextField.text = nil
         bottomTextField.text = nil
+
+        topTextField.font = defaultFont
+        bottomTextField.font = defaultFont
     }
 
     @IBAction func onCameraClicked() {
@@ -55,5 +61,19 @@ class ViewController: UIViewController {
     @IBAction func onCancelClicked() {
         setDefaultState()
         view.endEditing(true)
+    }
+
+    @IBAction func onFontClicked() {
+        let fontPickerController = UIFontPickerViewController()
+        fontPickerController.delegate = self
+        present(fontPickerController, animated: true, completion: nil)
+    }
+
+    func fontPickerViewControllerDidPickFont(_ viewController: UIFontPickerViewController) {
+        guard let descriptor = viewController.selectedFontDescriptor else { return }
+        let font = UIFont(descriptor: descriptor, size: defaultFont.pointSize)
+
+        topTextField.font = font
+        bottomTextField.font = font
     }
 }
