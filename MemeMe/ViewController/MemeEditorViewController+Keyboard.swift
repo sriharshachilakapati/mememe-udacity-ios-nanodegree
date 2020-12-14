@@ -23,7 +23,7 @@ extension MemeEditorViewController {
             return
         }
 
-        view.frame.origin.y -= getKeyboardHeight(notification)
+        view.frame.origin.y = -getKeyboardHeight(notification)
     }
 
     @objc private func keyboardWillHide(_ notification: Notification) {
