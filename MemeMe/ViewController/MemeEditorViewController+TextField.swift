@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension ViewController : UITextFieldDelegate {
+extension MemeEditorViewController : UITextFieldDelegate {
     internal func setupTextField(_ textField: UITextField) {
         textField.delegate = self
 

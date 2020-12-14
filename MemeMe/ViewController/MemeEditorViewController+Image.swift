@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension ViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension MemeEditorViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     internal func startPicker(source: UIImagePickerController.SourceType) {
         let pickerController = UIImagePickerController()
         pickerController.sourceType = source

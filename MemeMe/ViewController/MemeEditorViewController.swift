@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIFontPickerViewControllerDelegate {
+class MemeEditorViewController: UIViewController, UIFontPickerViewControllerDelegate {
 
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
