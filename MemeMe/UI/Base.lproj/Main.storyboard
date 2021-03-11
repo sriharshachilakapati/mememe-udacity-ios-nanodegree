@@ -125,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="-222" y="193"/>
         </scene>
-        <!--Saved Memes Collection Scene-->
+        <!--Saved Memes Collection-->
         <scene sceneID="cJ4-Wa-stS">
             <objects>
-                <viewController id="avk-2L-zno" userLabel="Saved Memes Collection Scene" sceneMemberID="viewController">
+                <viewController id="avk-2L-zno" userLabel="Saved Memes Collection" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rES-Wv-1hu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,17 +141,33 @@
             </objects>
             <point key="canvasLocation" x="1130" y="998"/>
         </scene>
-        <!--Saved Memes Table Scene-->
+        <!--Saved Memes Table-->
         <scene sceneID="R3z-1b-c10">
             <objects>
-                <viewController id="z0g-Ef-o6E" userLabel="Saved Memes Table Scene" sceneMemberID="viewController">
+                <viewController id="z0g-Ef-o6E" userLabel="Saved Memes Table" customClass="SavedMemeTableViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6fA-vU-QFi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gsq-RI-DUW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <sections/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sYC-f2-or1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sYC-f2-or1" firstAttribute="trailing" secondItem="gsq-RI-DUW" secondAttribute="trailing" id="2D3-sf-6cz"/>
+                            <constraint firstItem="sYC-f2-or1" firstAttribute="bottom" secondItem="gsq-RI-DUW" secondAttribute="bottom" id="HEd-eS-Ewa"/>
+                            <constraint firstItem="gsq-RI-DUW" firstAttribute="top" secondItem="sYC-f2-or1" secondAttribute="top" id="kmR-5Q-wpl"/>
+                            <constraint firstItem="gsq-RI-DUW" firstAttribute="leading" secondItem="sYC-f2-or1" secondAttribute="leading" id="y4l-70-HZf"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="List" image="list.dash" catalog="system" id="wSe-92-tT8"/>
+                    <connections>
+                        <outlet property="tableView" destination="gsq-RI-DUW" id="o4q-pX-vve"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iEc-br-1GD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

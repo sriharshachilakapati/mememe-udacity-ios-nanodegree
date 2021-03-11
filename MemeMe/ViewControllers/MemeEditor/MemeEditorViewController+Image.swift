@@ -32,7 +32,7 @@ extension MemeEditorViewController : UIImagePickerControllerDelegate, UINavigati
 
         activityController.completionWithItemsHandler = { (_, completed, _, _) in
             if completed {
-                self.save(originalImage: self.imageView.image!, memedImage: memedImage)
+                self.save(originalImage: self.imageView.image, memedImage: memedImage)
                 self.dismiss(animated: true, completion: nil)
             }
         }
@@ -40,9 +40,10 @@ extension MemeEditorViewController : UIImagePickerControllerDelegate, UINavigati
         present(activityController, animated: true, completion: nil)
     }
 
-    private func save(originalImage: UIImage, memedImage: UIImage) {
+    private func save(originalImage: UIImage?, memedImage: UIImage) {
         let meme = Meme(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: originalImage, memedImage: memedImage)
         (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 
     private func generateMemedImage() -> UIImage {
