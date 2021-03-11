@@ -41,9 +41,8 @@ extension MemeEditorViewController : UIImagePickerControllerDelegate, UINavigati
     }
 
     private func save(originalImage: UIImage, memedImage: UIImage) {
-        _ = Meme(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: originalImage, memedImage: memedImage)
-
-        // TODO: Use this in version 2.0 of the app
+        let meme = Meme(topText: self.topTextField.text!, bottomText: self.bottomTextField.text!, originalImage: originalImage, memedImage: memedImage)
+        (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
     }
 
     private func generateMemedImage() -> UIImage {
