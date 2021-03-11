@@ -45,15 +45,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		204ABF242585E21100375604 /* ViewController */ = {
+		204ABF242585E21100375604 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				20C83EE52584F38600403B52 /* MemeEditorViewController.swift */,
-				204ABF1E2585DF8000375604 /* MemeEditorViewController+Keyboard.swift */,
-				204ABF212585E1C100375604 /* MemeEditorViewController+TextField.swift */,
-				204ABF272585EABA00375604 /* MemeEditorViewController+Image.swift */,
+				2055500B25FAA5CC00DE48BC /* MemeEditor */,
 			);
-			path = ViewController;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		204ABF2B258642EA00375604 /* Models */ = {
@@ -62,6 +59,26 @@
 				204ABF2C258642FF00375604 /* Meme.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2055500A25FAA56000DE48BC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				20C83EE72584F38600403B52 /* Main.storyboard */,
+				20C83EEC2584F38800403B52 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2055500B25FAA5CC00DE48BC /* MemeEditor */ = {
+			isa = PBXGroup;
+			children = (
+				20C83EE52584F38600403B52 /* MemeEditorViewController.swift */,
+				204ABF1E2585DF8000375604 /* MemeEditorViewController+Keyboard.swift */,
+				204ABF212585E1C100375604 /* MemeEditorViewController+TextField.swift */,
+				204ABF272585EABA00375604 /* MemeEditorViewController+Image.swift */,
+			);
+			path = MemeEditor;
 			sourceTree = "<group>";
 		};
 		20C83ED52584F38600403B52 = {
@@ -83,13 +100,12 @@
 		20C83EE02584F38600403B52 /* MemeMe */ = {
 			isa = PBXGroup;
 			children = (
+				2055500A25FAA56000DE48BC /* UI */,
 				204ABF2B258642EA00375604 /* Models */,
-				204ABF242585E21100375604 /* ViewController */,
+				204ABF242585E21100375604 /* ViewControllers */,
 				20C83EE12584F38600403B52 /* AppDelegate.swift */,
 				20C83EE32584F38600403B52 /* SceneDelegate.swift */,
-				20C83EE72584F38600403B52 /* Main.storyboard */,
 				20C83EEA2584F38800403B52 /* Assets.xcassets */,
-				20C83EEC2584F38800403B52 /* LaunchScreen.storyboard */,
 				20C83EEF2584F38800403B52 /* Info.plist */,
 			);
 			path = MemeMe;
