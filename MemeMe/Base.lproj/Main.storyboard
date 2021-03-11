@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1eL-6h-P9S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1eL-6h-P9S">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -93,6 +93,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="bottomTextField" destination="AFd-m7-BcS" id="6Tf-gj-YHq"/>
                         <outlet property="cameraButton" destination="Rrv-oQ-s4p" id="pWv-9e-NRH"/>
@@ -104,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1433" y="193"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ykf-fj-nQ2">
@@ -117,15 +118,74 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WXy-HA-DGh"/>
+                        <segue destination="4xc-dd-tXC" kind="relationship" relationship="rootViewController" id="9vE-eC-vko"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tmh-Sy-lEw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="-222" y="193"/>
+        </scene>
+        <!--Saved Memes Collection Scene-->
+        <scene sceneID="cJ4-Wa-stS">
+            <objects>
+                <viewController id="avk-2L-zno" userLabel="Saved Memes Collection Scene" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rES-Wv-1hu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="e1K-gx-Z65"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Grid" image="rectangle.grid.3x2" catalog="system" id="gvG-dq-eua"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUa-EN-uuo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1130" y="998"/>
+        </scene>
+        <!--Saved Memes Table Scene-->
+        <scene sceneID="R3z-1b-c10">
+            <objects>
+                <viewController id="z0g-Ef-o6E" userLabel="Saved Memes Table Scene" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6fA-vU-QFi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sYC-f2-or1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="List" image="list.dash" catalog="system" id="wSe-92-tT8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iEc-br-1GD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="998"/>
+        </scene>
+        <!--Saved Memes-->
+        <scene sceneID="UNE-fQ-1le">
+            <objects>
+                <tabBarController id="4xc-dd-tXC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Saved Memes" id="Q4i-di-YAf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="o0g-QO-geD">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="vtI-JA-Ib9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EYX-Q3-MdG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="z0g-Ef-o6E" kind="relationship" relationship="viewControllers" id="Ken-1w-sOc"/>
+                        <segue destination="avk-2L-zno" kind="relationship" relationship="viewControllers" id="XCN-WW-7hk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2cW-89-fO7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="610" y="193"/>
         </scene>
     </scenes>
     <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="rectangle.grid.3x2" catalog="system" width="128" height="101"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
