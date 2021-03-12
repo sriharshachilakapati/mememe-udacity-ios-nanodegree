@@ -19,6 +19,9 @@ class SavedMemeTableViewController: UIViewController, UITableViewDelegate, UITab
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // Hide the extra separator lines in Grid
+        tableView.tableFooterView = UIView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
