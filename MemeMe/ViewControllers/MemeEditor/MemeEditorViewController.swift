@@ -62,6 +62,10 @@ class MemeEditorViewController: UIViewController, UIFontPickerViewControllerDele
     }
 
     @IBAction func onCancelClicked() {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func onResetClicked() {
         setDefaultState()
         view.endEditing(true)
     }

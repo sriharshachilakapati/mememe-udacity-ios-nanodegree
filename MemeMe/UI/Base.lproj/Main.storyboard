@@ -38,6 +38,12 @@
                                             <action selector="onFontClicked" destination="BYZ-38-t0r" id="fbS-m2-b5u"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="D3q-YI-Vht"/>
+                                    <barButtonItem title="Reset" id="EyO-bM-s9U">
+                                        <connections>
+                                            <action selector="onResetClicked" destination="BYZ-38-t0r" id="Cn4-L3-OiI"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="jgf-hz-FbA"/>
                                 </items>
                             </toolbar>
